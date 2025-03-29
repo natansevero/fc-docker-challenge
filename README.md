@@ -14,3 +14,17 @@ Rodando container a partir da imagem:
 ```
 docker run --rm natasevero/fullcycle
 ```
+
+## 2. Desafio Nginx Node MySQL
+
+Entre na pasta do desafio:
+```
+cd nginx-node-mysql
+```
+
+Rode os containers com docker compose:
+```
+docker compose up -d
+```
+
+Acesse a aplicação em seu browser: [http://localhost:8080](http://localhost:8080)
