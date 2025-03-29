@@ -1,0 +1,8 @@
+FROM golang:alpine AS builder
+WORKDIR /app
+COPY full-cycle-rocks.go .
+RUN CGO_ENABLED=0 go build -ldflags="-w -s" -o /my-app full-cycle-rocks.go
+
+FROM scratch
+COPY --from=builder /my-app /my-app
+ENTRYPOINT ["/my-app"]
